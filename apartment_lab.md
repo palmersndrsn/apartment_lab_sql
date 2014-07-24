@@ -48,4 +48,46 @@ Bonus (this might require you to look up documentation online)
 ```
 1. In the properties table change the name of the column "name" to "property_name". 
 2. Count the total number of properties where the owner_id is between 1 and 3.
+
+Answers
+
+1. \dt
+
+2. \du
+
+3. SELECT * FROM owners;
+
+4. SELECT * FROM owners WHERE name LIKE '%';
+
+5. SELECT * FROM owners ORDER BY (age) ASC;
+
+6. SELECT * FROM owners WHERE name LIKE 'Donald';
+
+7. SELECT * FROM owners WHERE age>'30';
+
+8. SELECT * FROM owners WHERE name LIKE 'e%';
+
+9. INSERT INTO owners (name,age) VALUES ('John',33);
+
+10. INSERT INTO owners (name,age) VALUES ('Jane',43);
+
+11. UPDATE owners SET name='Janet' WHERE name='Jane';
+
+12. UPDATE owners SET age='30' WHERE age='43';
+
+13. INSERT INTO properties (name,units_amount,owner_id) VALUES ('Archstone','20',1);
+
+14. DELETE FROM owners WHERE name='Janet';
+
+15. SELECT * FROM properties WHERE name NOT LIKE '%Archstone%' AND owner_id NOT IN ('3','5') ORDER BY name ASC;
+
+16. SELECT count (*) FROM properties
+
+17. SELECT MAX(age) FROM owners;
+
+18. SELECT * FROM owners LIMIT 3 OFFSET 0;
+
+19. ALTER TABLE properties ADD CONSTRAINT owner_fk FOREIGN KEY (property_id) REFERENCES owners (owner_id) ON DELETE NO ACTION;
+
+20. SELECT * FROM owners JOIN properties  ON owners.owner_id=properties.owner_id;
 ```
